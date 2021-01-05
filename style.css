@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --deep-dark: rgb(26, 26, 26);
+    --light-dark: rgb(79, 82, 92);
+    --light-blue: rgb(0, 132, 255);
+    --dark-blue: rgb(2, 84, 161);
+    --light: rgb(245, 245, 245);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+}
+
+h1 {
+    color: var(--light);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.todo {
+    width: 800px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+    text-align: center;
+}
+
+.header {
+    border-radius: 5px 5px 0 0;
+    padding: 40px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);}
+.header h1 {
+    transform: scale(1);
+    transition: 0.3s ease;
+}
+
+.header h1:hover {
+    transform: scale(1.2)
+}
+
+.todoInput {
+    width: 80%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
+}
+
+
+.alertInfo {
+    margin-top: 20px;
+    color: var(--dark-blue);
+}
+
+.addBtn {
+    margin-top: 10px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    color: var(--deep-dark);
+    background-color: var(--light);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+}
+
+.addBtn:hover {
+    color: #fff;
+    background-color: var(--light-dark);
+}
+
+.todoList {
+    padding: 20px 0;
+}
+
+.todoList h3 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.todoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding-left: 20px;
+    text-align: left;
+    list-style: none;
+    background-color: var(--light);
+}
+
+.tools {
+    display: inline-block;
+}
+
+.tools button {
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.tools button:hover {
+    background-color: #ddd;
+}
+
+.complete {
+    color: var(--light-blue);
+}
+
+.edit {
+    font-weight: bold;
+    color: rgb(15, 179, 69);
+}
+
+.delete {
+    color: tomato;
+}
+
+.completed {
+    font-size: 12px;
+    color: var(--light-dark);
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    color: var(--light);
+    background-color: var(--light-dark);
+    border-radius: 5px;
+}
+
+.popup h3 {
+    padding: 20px;
+}
+
+.popupInfo {
+    color: var(--light);
+    margin-bottom: 20px;
+}
+
+.popupBody {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 10px;
+}
+
+.popupInput {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
+}
+
+.popupBtn {
+    width: 30%;
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--deep-dark);
+    background-color: var(--light);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+}
+
+.popupBtn:hover {
+    color: #fff;
+    background-color: var(--light-blue);
+}
+.classOrder {
+    margin-top: 15px;
+    color: white;
+    font-weight: bold;
+
+}
+.classOrder div {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.uiinfo {
+    font-size: 13px;
+    text-align: right;
+    padding: 3px;
+    transition: 0.1s ease;
+}
+.uiinfo:hover {
+    font-size: 20px;
+}
+.author {
+    font-size: 20px;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    color: goldenrod;
+    font-family: 'Staatliches', cursive;
+    animation: colorChange 1.5s infinite;
+    transition: 0.3s ease;
+    transform: translateX(-300px);
+}
+@keyframes colorChange {
+0% {
+    color: goldenrod;
+}
+50% {
+    color: orange;
+}
+100% {
+    color: goldenrod;
+}}
+
+.author:hover {
+    font-size: 40px
+}
+#hide {
+    position: absolute;
+    top: 101vh;
+}
+.hide {
+    display: none;
+}
+.active {
+    transform: translateX(0);
+}
+#language {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+svg {
+    transition: 0.1s ease;
+}
+svg:hover {
+    transform: scale(1.3)
+}
+.translate4 {
+    padding-left: 5px;
+}
+#filter {
+    position: relative;
+    bottom: 1%;
+    left: 1%;
+    width: 40%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
+}
