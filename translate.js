@@ -3,8 +3,8 @@ const author = document.querySelector('.author');
     author.classList.add('active')
 
 //CONFIGABLE
-    let pltranslate = ['Lista zakupów', 'Podaj nazwe produktu...', 'DODAJ', 'Ważne', 'LISTA ZAKUPOWA', 'Twoje zakupy', 'UI Zainspirowane', 'Edytuj produkt:', 'Wprowadź nową nazwe produktu...', 'ZATWIERDŹ', 'ANULUJ']
-    let entranslate = ['Shop List', 'Give me product name...', 'ADD', 'IMPORTANT', 'SHOP LIST', 'Your shopping', 'UI Inspired', 'EDIT PRODUCT', 'Write new product name...', 'OKAY!', 'CANCEL']
+    let pltranslate = ['Lista zakupów', 'Podaj nazwe produktu...', 'DODAJ', 'Ważne', 'LISTA ZAKUPOWA', 'Twoje zakupy', 'UI Zainspirowane', 'Edytuj produkt:', 'Wprowadź nową nazwe produktu...', 'ZATWIERDŹ', 'ANULUJ', 'Filtruj produkty...']
+    let entranslate = ['Shop List', 'Give me product name...', 'ADD', 'IMPORTANT', 'SHOP LIST', 'Your shopping', 'UI Inspired', 'EDIT PRODUCT', 'Write new product name...', 'OKAY!', 'CANCEL', 'Filter Product...']
 //CONFIGABLE
 
 //CONST TRANSLATE
@@ -46,6 +46,7 @@ const pl = () => {
     translate9.placeholder = pltranslate[8]
     translate10.textContent = pltranslate[9]
     translate11.textContent = pltranslate[10]
+    filterInput.placeholder = pltranslate[11]
 }
 const en = () => {
     console.log(`Włączam tłumaczenie EN`);
@@ -60,6 +61,7 @@ const en = () => {
     translate9.placeholder = entranslate[8]
     translate10.textContent = entranslate[9]
     translate11.textContent = entranslate[10]
+    filterInput.placeholder = entranslate[11]
 }
 
 btnpl.addEventListener('click', pl)

@@ -57,12 +57,14 @@ h1 {
     background-color: var(--light);
 }
 
+
 .alertInfo {
     margin-top: 20px;
     color: var(--dark-blue);
 }
 
 .addBtn {
+    margin-top: 10px;
     padding: 10px 22px;
     border: none;
     border-radius: 5px;
@@ -261,4 +263,16 @@ svg:hover {
 }
 .translate4 {
     padding-left: 5px;
+}
+#filter {
+    position: relative;
+    bottom: 1%;
+    left: 1%;
+    width: 40%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
 }

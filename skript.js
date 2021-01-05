@@ -41,9 +41,17 @@ addBtn.addEventListener('click', () => {
         else {
             console.log('XD');
         }
+
+        const data = moment().format('LLL');
+        const dataelem = document.createElement('p')
+        dataelem.textContent = data;
+        dataelem.style.fontSize = '13px'
+        console.log(dataelem);
+
         tools.appendChild(completeBtn)
         tools.appendChild(editBtn)
         tools.appendChild(deleteBtn)
+        liList.appendChild(dataelem)
         liList.appendChild(tools);
         ulList.appendChild(liList);
 
@@ -95,6 +103,8 @@ ulList.addEventListener('click', (e) => {
     }
 })
 
+
+//IMPORTANT
 const important = document.querySelector('#important');
 important.addEventListener('click', () => {
     important.classList.toggle('yes')
@@ -103,3 +113,23 @@ important.addEventListener('click', () => {
 important.classList.remove('yes')
 
 
+//FILTER
+const filterInput = document.querySelector('#filter') 
+
+filterInput.addEventListener('keyup', () => {
+    const liAll = document.querySelectorAll('li');
+    const liAllArr = Array.prototype.slice.call(liAll)
+    console.log(liAllArr);
+    liAllArr.filter(function (x) { 
+    if(x.firstChild.textContent.includes(filterInput.value)){
+        console.log('tak');
+        x.style.display = 'flex'
+    }
+    else {
+        console.log('nie');
+        x.style.display = 'none'
+    }
+    console.log(x.firstChild.textContent);
+
+})
+})
