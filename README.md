@@ -1,4 +1,4 @@
-Hello it was my first project after 3 weeks learning JS. The UI was inspired from udemy course (MATEUSZ MAJ). But all mechanic and translate i write alone. Content:
+Hello it was my first project after 3 weeks learning JS. All mechanic and translate i write alone. Content:
 
 *Adding Product
 *Toggle Important Product
