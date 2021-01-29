@@ -9,3 +9,4 @@ Hello it was my first project after 3 weeks learning JS. All mechanic and transl
 *Change translate PL/EN
 *See data time
 TODO: LocalStorage and Optimalization
+https://swapperdev.github.io/Swapper-ShopList/
